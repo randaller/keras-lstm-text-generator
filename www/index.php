@@ -6,7 +6,6 @@
         <script src="jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
-        <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" crossorigin="anonymous" -->
         <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
 
         <!-- script src="https://unpkg.com/keras-js"></script -->
@@ -35,7 +34,6 @@
 
 <script>
         model = new KerasJS.Model({
-                // filepath : "lstm_keras.bin",
                 filepath: "<?php echo $model_file; ?>",
                 gpu      : true
         });
@@ -47,31 +45,6 @@
         }
 
         <?php echo $chars; ?>
-        // chars = ["\n", " ", "!", "\"", "(", ")", ",", "-", ".", "0", "1", "7", "9", ":", ";", "?", "i", "j", "l", "n", "r", "s", "u", "w", "\u00ab", "\u00bb", "\u0430", "\u0431", "\u0432", "\u0433", "\u0434", "\u0435", "\u0436", "\u0437", "\u0438", "\u0439", "\u043a", "\u043b", "\u043c", "\u043d", "\u043e", "\u043f", "\u0440", "\u0441", "\u0442", "\u0443", "\u0444", "\u0445", "\u0446", "\u0447", "\u0448", "\u0449", "\u044a", "\u044b", "\u044c", "\u044d", "\u044e", "\u044f", "\u0451", "\u2013", "\u2014", "\u2026"];
-
-        /*
-         chars = [];
-
-         function loadJSON(callback)
-         {
-         var xobj = new XMLHttpRequest();
-         xobj.overrideMimeType("application/json");
-         xobj.open('GET', 'chars_piknik.json', true);
-         xobj.onreadystatechange = function ()
-         {
-         if (xobj.readyState == 4 && xobj.status == "200")
-         {
-         callback(xobj.responseText);
-         }
-         };
-         xobj.send(null);
-         }
-
-         loadJSON(function (response)
-         {
-                chars = JSON.parse(response);
-         });
-         */
 
         const MAXLEN = <?php echo $seq_length; ?>;
         const CHARCOUNT = chars.length;
@@ -79,11 +52,7 @@
         sample = [];
         for (var i = 0; i < MAXLEN; i++)
         {
-                digit = Math.round(Math.random() * chars.length);
-                
-				// $("#result").append(chars[digit]);
-				// $("#seed").val( $("#seed").val() + chars[digit] );
-				
+                digit = Math.round(Math.random() * chars.length);				
                 for (var j = 0; j < CHARCOUNT; j++)
                 {
                         if (j == digit)
@@ -201,21 +170,6 @@
                                 temp = parseFloat(temp);
 
                                 digit = sampler(predictions, temp);
-
-                                /*
-                                 let max = -1;
-                                 let digit = null;
-                                 for (let i in predictions) {
-                                        let probability = predictions[i];
-                                        if (probability > max) {
-                                                max = probability;
-                                                digit = i;
-                                        }
-                                 }
-                                 */
-
-                                // console.log(`Predicted with index ${digit} with probability ${max.toFixed(3)}.`);
-                                // console.log(chars[digit]);
 
                                 $("#result").append(chars[digit]);
                                 <?php if ( $model_words ) echo '$("#result").append(" ");'; ?>
