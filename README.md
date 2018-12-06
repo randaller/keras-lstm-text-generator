@@ -1,9 +1,17 @@
 # keras-lstm-text-generator-website
 A LSTM neural network, trained on songbook corpses, now generates song lyrics in author`s style.
 
-Neural network evaluates straight in your browser by keras.js library. It is strongly recommended to run on a machine with strong GPU.
+Neural network evaluates straight in your browser by keras.js library.
+It is strongly recommended to run on a machine with strong GPU.
+
+Technologies used:
+- Tensorflow, Keras, Keras.js, JQuery, Bootstrap
+
+Languages used:
+Python, PHP, Javascript, HTML, CSS :)
 
 Put all the /www folder to any webserver with PHP to check how it works.
+Folder /lstm contains python code to train your network.
 
 Examples of generated texts:
 
@@ -16,6 +24,18 @@ we wants to be suxmised
 don't give and all the way to my love
 is there anybody there who feels that vibration
 who with me here and in the evening when i come back to love ya
+
+an just love to me right now
+love me till i'm down
+and i wonder if you know it too 
+i skywrite your name way
+not the way it find your way
+and you look us in cotes
+of the bind is time
+no one like you
+i can't wait for the nights with you
+i imagine the things that we've been take
+you'll be the rover flows
 ```
 
 Large ru/en song lyrics corpse
@@ -43,7 +63,17 @@ they won't go look around
 but now when they've been waiting on- hey baby
 she wants to run every way
 hey i'm undering and i'm not dreamin'
-your very say 
+your very say
+
+our love will said you always come and get yourself behind
+oh no, gursin my man
+i cannot come home at it
+too much for me!
+
+i'll plant you a game of life without love
+slime's on the man slipping
+the birds are the sun
+in the heart: on ang bursed myself long as i can
 ```
 
 DDT
