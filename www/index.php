@@ -40,7 +40,6 @@
 
         function change_model(sel)
         {
-                // console.log( "?model=" + sel.value );
                 window.location.href = "?model=" + sel.value;
         }
 
@@ -243,7 +242,6 @@
 
                         <label for="selector">Model:&nbsp;&nbsp;</label>
                         <select id="selector" class="form-control" onchange="change_model(this);">
-                                <!-- option value="piknik" selected>piknik</option -->
                                 <?php echo $selector; ?>
                         </select>
 
