@@ -5,10 +5,17 @@ Neural network evaluates straight in your browser by keras.js library.
 It is strongly recommended to run on a machine with strong GPU.
 
 Technologies used:
-- Tensorflow, Keras, Keras.js, JQuery, Bootstrap
+- Tensorflow
+- Keras
+- Keras.js
+- JQuery
+- Bootstrap
 
 Languages used:
-Python, PHP, Javascript, HTML, CSS :)
+- Python
+- PHP
+- Javascript
+- HTML/CSS
 
 Put all the /www folder to any webserver with PHP to check how it works.
 Folder /lstm contains python code to train your network.
