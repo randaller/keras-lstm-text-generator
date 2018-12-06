@@ -18,7 +18,8 @@ Languages used:
 - HTML/CSS
 
 Put all the /www folder to any webserver with PHP to check how it works.
-Folder /lstm contains python code to train your network.
+Folder /lstm contains python code to train your word or character level LSTM networks.
+Convert .h5 files to .bin models using keras.js converter.
 
 Examples of generated texts:
 
